@@ -4,7 +4,7 @@ body
     margin: auto;
     font-size: 1.2rem;
     background-image: url("media/concert.jpg");
-    background-repeat: no-repeat;
+    background-repeat:no-repeat;
     background-attachment: fixed;
     background-size: cover;
     color: white;
@@ -135,6 +135,12 @@ div
 section
 {
     margin: auto;
+    text-align: center;
+}
+
+q
+{
+    text-align: left;
 }
 
 .quote
@@ -286,11 +292,31 @@ video
     .hasab 
     {
         column-count: 1;
-    }
+    } 
 }
 
 @media screen and (max-width: 360px) 
 {
+    body
+    {
+        width: 100%;
+        background-repeat: no-repeat;
+        background-image: url("media/concert_kicsi.jpg");
+    }
+
+    main 
+    {
+        border-radius: 0em;
+        margin: 0px;
+    }
+
+    header, footer
+    {
+        border-radius: 0em;
+        margin: 0px;
+        background-color: rgb(100, 12, 12);
+    }
+
     .hasab 
     {
         column-count: 1;
