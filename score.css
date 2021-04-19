@@ -11,15 +11,6 @@ body
     display: block;
 }
 
-main 
-{
-    background-color: rgba(155, 20, 20, 0.7);
-    padding: 20px;
-    margin: 20px 10px;
-    text-align: justify;
-    border-radius: 2em;
-}
-
 h1 {grid-area: cim;}
 nav {grid-area: menu;}
 img {grid-area: logo;}
@@ -36,6 +27,15 @@ header
     grid-template-areas: 
     'cim logo'
     'menu logo';
+}
+
+main 
+{
+    background-color: rgba(155, 20, 20, 0.7);
+    padding: 20px;
+    margin: 20px 10px;
+    text-align: justify;
+    border-radius: 2em;
 }
 
 footer
@@ -78,6 +78,24 @@ nav a:hover, nav a:active
     color: black;
 }
 
+nav a.selected
+{
+    background-color: rgb(155, 20, 20);
+    color: black;
+}
+
+nav ul
+{
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+nav li
+{
+    padding: 5px;
+}
+
 h1
 {
     font-family: 'Train One', cursive;
@@ -88,7 +106,7 @@ h1
     padding: 20px 50px;
 }
 
-#discog
+.discography
 {
     background-color: dimgray;
     padding: 10px;
@@ -98,26 +116,20 @@ h1
     margin: auto;
 }
 
-#discog td, #discog th
+.discography td, .discography th
 {
     border: 1px solid black;
     padding: 6px;
 }
 
-#discog tr:nth-child(even)
+.discography tr:nth-child(even)
 {
     background-color: gray;
 }
 
-#discog td img
+.discography td img
 {
     width: 2cm;
-}
-
-nav a.selected
-{
-    background-color: rgb(155, 20, 20);
-    color: black;
 }
 
 .hasab 
@@ -165,18 +177,6 @@ article
     grid-template-areas: 
     'alcim'
     'szoveg';
-}
-
-nav ul
-{
-    list-style: none;
-    display: flex;
-    flex-flow: row wrap;
-}
-
-nav li
-{
-    padding: 5px;
 }
 
 p
@@ -325,5 +325,10 @@ video
     {
         width: 100%;
         margin-top: 0;
+    }
+    .scrollable
+    {
+        width: 95%;
+        overflow-x: scroll;
     }
 } 
