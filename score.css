@@ -1,0 +1,303 @@
+body
+{
+    width: 90%;
+    margin: auto;
+    font-size: 1.2rem;
+    background-image: url("media/concert.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+    display: block;
+}
+
+main 
+{
+    background-color: rgba(155, 20, 20, 0.7);
+    padding: 20px;
+    margin: 20px 10px;
+    text-align: justify;
+    border-radius: 2em;
+}
+
+h1 {grid-area: cim;}
+nav {grid-area: menu;}
+img {grid-area: logo;}
+
+header
+{
+    background-color: rgba(155, 20, 20, 0.7);
+    padding: 20px;
+    padding-top: 0px;
+    margin: 20px 10px;
+    border-radius: 2em;
+    display: grid;
+    grid-template-columns: 5fr  1fr;
+    grid-template-areas: 
+    'cim logo'
+    'menu logo';
+}
+
+footer
+{
+    background-color: rgba(155, 20, 20, 0.7);
+    padding: 20px;
+    margin: 20px 10px;
+    border-radius: 2em;
+}
+
+a:link
+{
+    color: black;
+}
+
+a:hover, a:active
+{
+    color:darkred;
+}
+
+a:visited
+{
+    color: darkgray;
+}
+
+nav a:link, nav a:visited
+{
+    background-color: rgb(75, 75, 75);
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 1em;
+    width: 100px;
+}
+  
+nav a:hover, nav a:active 
+{
+    background-color: rgb(155, 20, 20);
+    color: black;
+}
+
+h1
+{
+    font-family: 'Train One', cursive;
+    font-size: 2.5rem;
+    text-transform:capitalize;
+    font-variant: small-caps;
+    margin: 0;
+    padding: 20px 50px;
+}
+
+#discog
+{
+    background-color: dimgray;
+    padding: 10px;
+    border-collapse: collapse;
+    width: 75%;
+    text-align: center;
+    margin: auto;
+}
+
+#discog td, #discog th
+{
+    border: 1px solid black;
+    padding: 6px;
+}
+
+#discog tr:nth-child(even)
+{
+    background-color: gray;
+}
+
+#discog td img
+{
+    width: 2cm;
+}
+
+nav a.selected
+{
+    background-color: rgb(155, 20, 20);
+    color: black;
+}
+
+.hasab 
+{
+    width: auto;
+    column-count:2;
+    column-gap: 30px;
+}
+
+div
+{
+    margin: 5px;
+}
+
+section
+{
+    margin: auto;
+}
+
+.quote
+{
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.8rem;
+    padding: 5px;
+    margin: 20px 40px;
+}
+
+h2 {grid-area: alcim;}
+div {grid-area: szoveg;}
+
+article
+{
+    font-size: 1.4rem;
+    /* font-family: 'Kiwi Maru', serif; */
+    font-family: 'Cormorant', serif;
+    display: grid;
+    grid-template-rows: 60px 1fr; 
+    grid-template-areas: 
+    'alcim'
+    'szoveg';
+}
+
+nav ul
+{
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+nav li
+{
+    padding: 5px;
+}
+
+p
+{
+    margin: auto;
+}
+
+h2
+{
+    margin: auto;
+}
+
+img
+{
+    margin: auto;
+}
+
+figure
+{
+    text-align: center;
+}
+
+.tour
+{
+    width: 70%;
+    min-width: 250px;
+    margin: auto;
+}
+
+form
+{
+    font-size: 1.3rem;
+}
+
+input[type=button], input[type=submit], input[type=reset] 
+{
+    background-color: gray;
+    border: 4px;
+    border-color: black;
+    border-radius: 5px;
+    color:black;
+    padding: 10px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover, input[type=reset]:hover 
+{
+    background-color: rgb(95, 95, 95);
+}
+
+input[type=text], select, textarea 
+{
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+  
+label 
+{
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+fieldset
+{
+    width: 90%;
+    border-radius: 5px;
+    background-color: #360e0eb6;
+    padding: 20px;
+    margin: auto;
+}
+
+.col-25 
+{
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+    box-sizing: border-box;
+}
+  
+.col-75 
+{
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+    box-sizing: border-box;
+}
+
+.row:after 
+{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+video
+{
+    min-width: 260px;
+    max-width: 80%;
+    height: auto;
+}
+
+.responsive {
+    max-width: 80%;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) 
+{
+    .hasab 
+    {
+        column-count: 1;
+    }
+}
+
+@media screen and (max-width: 360px) 
+{
+    .hasab 
+    {
+        column-count: 1;
+    }
+    .col-25, .col-75, input[type=submit], input[type=reset]
+    {
+        width: 100%;
+        margin-top: 0;
+    }
+} 

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Score | Kérdőív</title>
+    <link rel="stylesheet" type="text/css" href="score.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>The score</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Kezdőlap</a></li>
+                <li><a href="zenekar.html">A zenekar</a></li>
+                <li><a href="erdekessegek.html">Érdekességek</a></li>
+                <li><a href="kerdoiv.html" class="selected">Kérdőív</a></li>
+            </ul>
+        </nav>
+        <img src="media/logo.png" width="100px" height="100px" alt="logo">
+    </header>
+    <main>
+        <form method="post" action="mailto:at6xb4@inf.elte.hu">
+            <fieldset>
+                <legend>Kérdőív a zenekarról</legend>
+                <div class="row">
+                    <label for="nev" class="col-25">Név: </label>
+                    <input type="text" id="nev" name="nev" class="col-75">
+                </div>
+                <div class="row">
+                    <label for="e-mail" class="col-25">E-mail cím: </label>
+                    <input type="text" id="e-mail" name="e-mail" class="col-75">
+                </div>
+                <div class="row">
+                    <label for="kedvenc" class="col-25">Kedvenc zenei műfaj, előadó(k): </label>
+                    <textarea id="kedvenc" name="kedvenc" rows="4" cols="40" class="col-75"></textarea>
+                </div>
+                <div class="row">
+                    <label for="ismeri">Hallottál-e már a bandáról? </label>
+                    <input id="yay" type="checkbox" name="yay">
+                </div>
+                <div class="row">
+                    <p>Mennyire tetszenek a dalaik? </p>
+                    <input id="e1" type="radio" name="ertekeles" value="1">
+                    <label for="e1">1</label>
+                    <input id="e2" type="radio" name="ertekeles" value="2">
+                    <label for="e2">2</label>
+                    <input id="e3" type="radio" name="ertekeles" value="3">
+                    <label for="e3">3</label>
+                    <input id="e4" type="radio" name="ertekeles" value="4">
+                    <label for="e4">4</label>
+                    <input id="e5" type="radio" name="ertekeles" value="5">
+                    <label for="e5">5</label>
+                </div>
+
+                <input type="submit" value="Küldés">
+                <input type="reset" value="Alaphelyzet">
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <div>Készítette: Rácz Alexandra – AT6XB4</div>
+    </footer>
+
+</body>
+
+</html>
