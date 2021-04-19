@@ -25,37 +25,37 @@
         <img src="media/logo.png" width="100px" height="100px" alt="logo">
     </header>
     <main>
-        <form method="post" action="mailto:at6xb4@inf.elte.hu">
+        <form method="post" action="mailto:at6xb4@inf.elte.hu" enctype="text/plain">
             <fieldset>
                 <legend>Kérdőív a zenekarról</legend>
                 <div class="row">
                     <label for="nev" class="col-25">Név: </label>
-                    <input type="text" id="nev" name="nev" class="col-75">
+                    <input type="text" id="nev" name="nev" class="col-75" maxlength="30" minlength="4">
                 </div>
                 <div class="row">
                     <label for="e-mail" class="col-25">E-mail cím: </label>
-                    <input type="text" id="e-mail" name="e-mail" class="col-75">
+                    <input type="text" id="e-mail" name="e-mail" class="col-75" maxlength="30" minlength="10">
                 </div>
                 <div class="row">
                     <label for="kedvenc" class="col-25">Kedvenc zenei műfaj, előadó(k): </label>
-                    <textarea id="kedvenc" name="kedvenc" rows="4" cols="40" class="col-75"></textarea>
+                    <textarea id="kedvenc" name="kedvenc" rows="4" cols="40" class="col-75" maxlength="300"></textarea>
                 </div>
                 <div class="row">
                     <label for="ismeri">Hallottál-e már a bandáról? </label>
-                    <input id="yay" type="checkbox" name="yay">
+                    <input id="ismeri" type="checkbox" name="ismeri">
                 </div>
                 <div class="row">
                     <p>Mennyire tetszenek a dalaik? </p>
                     <input id="e1" type="radio" name="ertekeles" value="1">
-                    <label for="e1">1</label>
+                    <label for="e1">1</label> <br/>
                     <input id="e2" type="radio" name="ertekeles" value="2">
-                    <label for="e2">2</label>
+                    <label for="e2">2</label> <br/>
                     <input id="e3" type="radio" name="ertekeles" value="3">
-                    <label for="e3">3</label>
+                    <label for="e3">3</label> <br/>
                     <input id="e4" type="radio" name="ertekeles" value="4">
-                    <label for="e4">4</label>
+                    <label for="e4">4</label> <br/>
                     <input id="e5" type="radio" name="ertekeles" value="5">
-                    <label for="e5">5</label>
+                    <label for="e5">5</label> <br/>
                 </div>
 
                 <input type="submit" value="Küldés">
