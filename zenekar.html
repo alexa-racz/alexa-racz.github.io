@@ -13,16 +13,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body onresize="resetMenu();">
     <header>
         <h1>The score</h1>
         <nav>
-            <ul>
-                <li><a href="index.html">Kezdőlap</a></li>
-                <li><a href="zenekar.html" class="selected">A zenekar</a></li>
-                <li><a href="erdekessegek.html">Érdekességek</a></li>
-                <li><a href="kerdoiv.html">Kérdőív</a></li>
-            </ul>
+            <button type="button" class="gomb small" onclick="toggleMenu();">
+                <span><img src="media/crown.png"></span>
+            </button>
+            <div class="large" id="menu">
+                <ul>
+                    <li><a href="index.html">Kezdőlap</a></li>
+                    <li><a href="zenekar.html" class="selected">A zenekar</a></li>
+                    <li><a href="erdekessegek.html">Érdekességek</a></li>
+                    <li><a href="kerdoiv.html">Kérdőív</a></li>
+                </ul>
+            </div>
         </nav>
         <img src="media/logo.png" width="100px" height="100px" alt="logo">
     </header>
@@ -68,7 +73,7 @@
         <hr>
         <aside>
             <div class="hasab">
-                <div>Legsikeresebb számuk:</div>
+                <p>Legsikeresebb számuk:</p>
                 <figure>
                     <video controls poster="media/unstoppable_poster.jpg">
                         <source src="media/The Score - Unstoppable (Lyric Video).mp4" type="video/mp4">
@@ -76,7 +81,7 @@
                         Your browser does not support the video tag.
                     </video>
                 </figure>
-                <div>Aktuális kedvencem tőlük:</div>
+                <p>Aktuális kedvencem tőlük:</p>
                 <figure>
                     <video controls poster="media/fire_poster.jpg">
                         <source src="media/The Score - Fire (Audio).mp4" type="video/mp4">
@@ -96,5 +101,4 @@
     </footer>
 
 </body>
-
 </html>
