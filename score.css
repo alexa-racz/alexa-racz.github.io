@@ -9,6 +9,7 @@ body
     background-size: cover;
     color: white;
     display: block;
+    word-wrap:break-word;
 }
 
 h1 {grid-area: cim;}
@@ -46,6 +47,7 @@ footer
     border-radius: 2em;
 }
 
+/* linkek */
 a:link
 {
     color: black;
@@ -61,6 +63,7 @@ a:visited
     color: darkgray;
 }
 
+/* nav */
 nav a:link, nav a:visited
 {
     background-color: rgb(75, 75, 75);
@@ -69,7 +72,7 @@ nav a:link, nav a:visited
     text-align: center;
     display: inline-block;
     border-radius: 1em;
-    width: 100px;
+    width: 120px;
 }
   
 nav a:hover, nav a:active 
@@ -96,6 +99,12 @@ nav li
     padding: 5px;
 }
 
+.logo
+{
+    width: 100px;
+    height: auto;
+}
+
 h1
 {
     font-family: 'Train One', cursive;
@@ -106,12 +115,49 @@ h1
     padding: 20px 50px;
 }
 
+h2 {grid-area: alcim;}
+div {grid-area: szoveg;}
+
+article
+{
+    font-size: 1.4rem;
+    /* font-family: 'Kiwi Maru', serif; */
+    font-family: 'Cormorant', serif;
+    display: grid;
+    grid-template-rows: 60px 1fr; 
+    grid-template-areas: 
+    'alcim'
+    'szoveg';
+}
+
+section
+{
+    margin: auto;
+    text-align: center;
+    display: grid; 
+    vertical-align: top;
+}
+
+aside
+{
+    margin: auto;
+    display: grid;
+    vertical-align: top;
+}
+
+figure
+{
+    text-align: center;
+}
+
+/* táblázat */
 .discography
 {
     background-color: dimgray;
     padding: 10px;
     border-collapse: collapse;
-    width: 75%;
+    max-width: 980px;
+    width: 80%;
     text-align: center;
     margin: auto;
 }
@@ -144,17 +190,6 @@ div
     margin: 5px;
 }
 
-section
-{
-    margin: auto;
-    text-align: center;
-}
-
-q
-{
-    text-align: left;
-}
-
 .quote
 {
     text-align: center;
@@ -164,39 +199,14 @@ q
     margin: 20px 40px;
 }
 
-h2 {grid-area: alcim;}
-div {grid-area: szoveg;}
-
-article
-{
-    font-size: 1.4rem;
-    /* font-family: 'Kiwi Maru', serif; */
-    font-family: 'Cormorant', serif;
-    display: grid;
-    grid-template-rows: 60px 1fr; 
-    grid-template-areas: 
-    'alcim'
-    'szoveg';
-}
-
-p
+p, h2, img
 {
     margin: auto;
 }
 
-h2
+ul
 {
-    margin: auto;
-}
-
-img
-{
-    margin: auto;
-}
-
-figure
-{
-    text-align: center;
+    list-style: disc;
 }
 
 .tour
@@ -209,6 +219,23 @@ figure
 form
 {
     font-size: 1.3rem;
+    margin: auto;
+    max-width: 800px;
+}
+
+fieldset
+{
+    border-radius: 5px;
+    background-color: #360e0eb6;
+    padding: 20px;
+    margin: auto;
+    text-align: left;
+}
+
+label 
+{
+    padding: 12px 12px 12px 0;
+    display: inline-block;
 }
 
 input[type=button], input[type=submit], input[type=reset] 
@@ -231,25 +258,10 @@ input[type=submit]:hover, input[type=reset]:hover
 
 input[type=text], select, textarea 
 {
-    padding: 12px;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     resize: vertical;
-}
-  
-label 
-{
-    padding: 12px 12px 12px 0;
-    display: inline-block;
-}
-
-fieldset
-{
-    width: 90%;
-    border-radius: 5px;
-    background-color: #360e0eb6;
-    padding: 20px;
-    margin: auto;
 }
 
 .col-25 
@@ -287,9 +299,28 @@ video
     height: auto;
 }
 
-ul
+.gomb
 {
-    list-style: disc;
+    background-color: black;
+    width: 60px;
+    height: 60px;
+    border-color: gray;
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
+    margin: auto;
+    float: right;
+    cursor: pointer;
+}
+
+.large
+{
+    display: flex;
+}
+
+.small
+{
+    display: none;
 }
 
 @media screen and (max-width: 768px) 
@@ -298,6 +329,19 @@ ul
     {
         column-count: 1;
     } 
+    .scrollable
+    {
+        width: 95%;
+        overflow-x: scroll;
+    }
+    header
+    {
+        grid-template-columns: 4fr  1fr;
+    }
+    /* .large
+    {
+        display: block;
+    } */
 }
 
 @media screen and (max-width: 360px) 
@@ -313,13 +357,44 @@ ul
     {
         border-radius: 0em;
         margin: 0px;
+        text-align: left;
     }
 
     header, footer
     {
+        /* display: block; */
+        /* grid-template-areas: 'menu'; */
+        /* width: 100%; */
         border-radius: 0em;
         margin: 0px;
+        padding: 10px;
         background-color: rgb(100, 12, 12);
+    }
+
+    h1 {grid-area: cim;}
+    nav {grid-area: gomb;}
+
+    header
+    {
+        margin: auto;
+        padding: 20px;
+        vertical-align: middle;
+        display: grid;
+        grid-template-columns: 4fr  1fr;
+        grid-template-areas: 
+        'cim gomb';
+    }
+
+    nav
+    {
+        vertical-align: middle;
+        margin: auto;
+    }
+
+    h1
+    {
+        float: left;
+        padding: 10px;
     }
 
     .hasab 
@@ -336,4 +411,35 @@ ul
         width: 95%;
         overflow-x: scroll;
     }
+
+    form
+    {
+        width: 95%;
+        text-align: center;
+    }
+    .large
+    {
+        display: none;
+    }
+    .small
+    {
+        display: block;
+    }
+    .logo
+    {
+        display: none;
+    }
 } 
+
+@media print 
+{
+    header
+    {
+        display: none;
+    }
+
+    footer
+    {
+        display: none;
+    }
+}
