@@ -13,20 +13,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+
+
 </head>
 
-<body>
+<body onresize="resetMenu();">
     <header>
         <h1>The score</h1>
         <nav>
-            <ul>
-                <li><a href="index.html" class="selected">Kezdőlap</a></li>
-                <li><a href="zenekar.html">A zenekar</a></li>
-                <li><a href="erdekessegek.html">Érdekességek</a></li>
-                <li><a href="kerdoiv.html">Kérdőív</a></li>
-            </ul>
+            <button type="button" class="gomb small" onclick="toggleMenu();">
+                <span><img src="media/crown.png"></span>
+            </button>
+            <div class="large" id="menu">
+                <ul>
+                    <li><a href="index.html" class="selected">Kezdőlap</a></li>
+                    <li><a href="zenekar.html">A zenekar</a></li>
+                    <li><a href="erdekessegek.html">Érdekességek</a></li>
+                    <li><a href="kerdoiv.html">Kérdőív</a></li>
+                </ul>
+            </div>
         </nav>
-        <img src="media/logo.png" width="100px" height="100px" alt="logo">
+        <img src="media/logo.png" alt="logo" class="logo">
     </header>
     <main>
         <article>
@@ -140,6 +147,29 @@
         </div>
     </footer>
 
+    <script src="menu.js"></script>
+    <script>
+    //     var menu=document.getElementById("menu");
+    //     var savedZIndex = menu.style.zIndex; 
+    //     var savedPosition = menu.style.position; 
+    //     var savedBackgroundColor = menu.style.backgroundColor;        
+    //     function toggleMenu()
+    //     {
+    //         menu.style.display=menu.style.display=="none" ? "flex" : "none";
+    //         menu.style.zIndex++;
+    //         menu.style.position="absolute";
+    //         menu.style.backgroundColor="#640c0c"; // rgb(100, 12, 12);
+    //         menu.style.width="100%";
+    //     }
+    //     function resetMenu()
+    //     {
+    //         menu.style.display="";
+    //         menu.style.zIndex=savedZIndex;
+    //         menu.style.position=savedPosition;
+    //         menu.style.backgroundColor=savedBackgroundColor;
+    //     }
+    //
+    </script>
 </body>
 
 </html>
