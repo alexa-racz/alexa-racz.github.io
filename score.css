@@ -427,6 +427,7 @@ video
     }
     .logo
     {
+        visibility: hidden;
         display: none;
     }
 } 
