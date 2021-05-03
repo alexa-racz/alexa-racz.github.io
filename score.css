@@ -30,7 +30,7 @@ header
     'menu logo';
 }
 
-main 
+main
 {
     background-color: rgba(155, 20, 20, 0.7);
     padding: 20px;
@@ -141,7 +141,6 @@ section
 aside
 {
     margin: auto;
-    display: grid;
     vertical-align: top;
 }
 
@@ -180,7 +179,7 @@ figure
 
 .hasab 
 {
-    width: auto;
+    width: inherit;
     column-count:2;
     column-gap: 30px;
 }
@@ -290,8 +289,8 @@ input[type=text], select, textarea
 video
 {
     margin: auto;
-    min-width: 260px;
-    max-width: 80%;
+    min-width: 200px; 
+    width: 80%;
     height: auto;
 }
 
@@ -339,10 +338,6 @@ video
     {
         grid-template-columns: 4fr  1fr;
     }
-    /* .large
-    {
-        display: block;
-    } */
 }
 
 @media screen and (max-width: 414px) 
@@ -362,9 +357,6 @@ video
 
     header, footer
     {
-        /* display: block; */
-        /* grid-template-areas: 'menu'; */
-        /* width: 100%; */
         border-radius: 0em;
         margin: 0px;
         padding: 10px;
@@ -454,12 +446,7 @@ video
 
 @media print 
 {
-    header
-    {
-        display: none;
-    }
-
-    footer
+    header, footer, video
     {
         display: none;
     }
