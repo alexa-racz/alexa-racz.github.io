@@ -1,0 +1,13 @@
+body
+{
+    margin: auto;
+    background-color: rgba(155, 20, 20, 0.7);
+    color: white;
+    text-align: center;
+}
+
+h1
+{
+    margin: auto;
+    padding: 10px;
+}
